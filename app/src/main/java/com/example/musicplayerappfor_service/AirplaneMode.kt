@@ -8,7 +8,7 @@ import android.widget.Toast
 
 class AirplaneMode: BroadcastReceiver(){
 
-
+//AirPlaneMode Receiver
     override fun onReceive(context: Context?, intent: Intent?) {
 
         Toast.makeText(
@@ -21,6 +21,7 @@ class AirplaneMode: BroadcastReceiver(){
             val isAirplaneModeEnabled =
                 intent.getBooleanExtra("state", false)
 
+            //qui dichiaro che se si attiva la modalità AirPlane allora blocco la musica.
             if (isAirplaneModeEnabled){
                 Toast.makeText(context,
                     "Airplane Mode Enabled",
